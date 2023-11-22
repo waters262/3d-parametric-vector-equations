@@ -1,0 +1,97 @@
+\documentclass{report}
+\usepackage{adjustbox}
+\usepackage{amsmath}
+\usepackage[table]{xcolor}
+\usepackage{mathtools}
+\usepackage[utf8]{inputenc}
+% \usepackage{arydshln}
+\usepackage{pdflscape}
+\usepackage{layout}
+\usepackage{blindtext}
+\usepackage{geometry}
+% Use the following two packages for underscores !!
+\usepackage{underscore}
+\usepackage[T1]{fontenc}
+\usepackage[document]{ragged2e}
+\usepackage{graphicx}
+\usepackage{watermark}
+\usepackage{booktabs}
+\usepackage{lmodern}    % Required for fontenc, only affects later versions of LaTex
+
+% \usepackage{draftwatermark}
+% \SetWatermarkText{DRAFT}
+% \SetWatermarkScale{1}
+\usepackage[Glenn]{fncychap}
+\usepackage{tikz, tcolorbox}
+\usepackage{longtable,multirow}
+\usepackage[colorlinks=true, urlcolor=cyan, filecolor=green]{hyperref}
+
+\geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=15mm,
+ top=20mm,
+ }
+\usepackage{setspace}
+\onehalfspacing
+
+% Footers and Headers
+\usepackage{fancyhdr, lastpage}
+\pagestyle{fancy} 
+\rhead{D04 Tenancy}
+\fancyfoot{}
+\fancyfoot[CO,CE]{  Page  \thepage \ of \pageref{LastPage} }
+\fancyfoot[RO,RE]{ \hyperlink{toc}{Table of Contents}   }
+
+% Title Page
+% \thiswatermark{\centering \put(40,-320){\includegraphics[scale=0.6]{Images/Presentation_Grabber_small.png}} }
+\title{ \vspace{40mm} \Huge {\textbf{DevSecOps Report - Sample }}    
+\author{Kevin Waters }
+\date{\today}
+\thanks{The opinions, techniques and content used in this report are those of the author/contributors and in no way meant to reflect the best practices or opinions of 
+Oracle Corporation and will also not be supported by Oracle.} }
+
+% Begin Document
+
+\begin{document}
+\maketitle
+  
+% % About this Report 
+% \input{About.tex}
+
+% TOC
+\addtocontents{toc}{\protect\hypertarget{toc}{}}
+\tableofcontents
+
+% Introduction
+\chapter{Introduction}
+% \includegraphics[scale=.65]{Chapters/Images/OCI_Arch_thumb.png}
+\newpage
+\section{Steps to Install LLM packages}
+\begin{enumerate}
+    \item Install Jupyter Notebook with Anaconda
+    \item run:   pip3 install matplotlib numpy pylzma
+    \item run:   pip3 install torch --index-url https://download.pytorch.org/whl/cu118
+    \item run to verify:   jupyter notebook
+    \item run to use cuda:  python -m ipykernel install --user --name=cuda --display-name "cuda-gpt"
+    \item run:   jupyter notebook
+\end{enumerate}
+
+
+% \input{Chapters/Introduction/Introduction.tex}
+
+% Security Assessment
+\chapter{Security Assessment}
+\section{OCI Security Assessment}
+% \input{Chapters/Security_Assessment/Security_Assessment.tex}
+
+% % Architecture
+% \chapter{Architecture}
+% \includegraphics[scale=.85,width=\textwidth]{Chapters/Images/LA_Env_4K_HQ_thumb.png}
+% \newpage
+% \section{Planned OCI Architecture}
+% \includegraphics[scale=.85,width=\textwidth]{Chapters/Images/D04-Arch_v23.0.dev_125.jpg}
+
+\newpage
+
+\end{document}
